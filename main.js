@@ -79,7 +79,7 @@ function showAll() {
             <td>${list[i].cmdCust}</td>
             <td>${list[i].dateCust}</td>
             <td>${list[i].amount}</td>
-            <td><button onclick="removeSoTietKiem(${i})">Xóa</button></td>
+            <td><button class="btn btn-remove" onclick="removeSoTietKiem(${i})">Xóa</button></td>
         </tr>
         `
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,29 +11,81 @@
     td {
         padding: 6px 8px;
     }
+
+    .btn {
+        padding: 5px;
+        border-radius: 4px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        border: none;
+    }
+
+    .btn-add {
+        background-color: green;
+    }
+
+    .btn-add:hover {
+        background-color: darkgreen;
+    }
+
+    .btn-remove {
+        background-color: rgba(246, 4, 4, 0.912);
+    }
+
+    .btn-remove:hover {
+        background-color: darkred;
+    }
 </style>
+
 <body>
     <h1>Quản lý sổ tiết kiệm</h1>
-    <label for="idCust">Nhập mã số</label>
-    <input type="text" id="idCust"><br><br>
-    <label for="typeCust">Loại tiết kiệm</label>
-    <input type="text" id="typeCust"><br><br>
-    <label for="nameCust">Tên khách hàng</label>
-    <input type="text" id="nameCust"><br><br>
-    <label for="cmdCust">Chứng minh nhân dân</label>
-    <input type="number" id="cmdCust"><br><br>
-    <label for="dateCust">Ngày mở sổ</label>
-    <input type="text" id="dateCust"><br><br>
-    <label for="amount">Số tiền</label>
-    <input type="text" id="amount"><br><br>
-    <button onclick="addSoTietKiem()">Thêm khách hàng</button>
+    <table border="1">
+        <tr>
+            <th>
+                <label for="idCust">Nhập mã số</label>
+            </th>
+            <td>
+                <input type="text" id="idCust">
+            </td>
+        </tr>
+        <tr>
+            <th><label for="idCust">Nhập mã số</label></th>
+            <td><input type="text" id="idCust"></td>
+        </tr>
+        <tr>
+            <th><label for="typeCust">Loại tiết kiệm</label></th>
+            <td><input type="text" id="typeCust"></td>
+        </tr>
+        <tr>
+            <th><label for="nameCust">Tên khách hàng</label></th>
+            <td><input type="text" id="nameCust"></td>
+        </tr>
+        <tr>
+            <th><label for="cmdCust">Chứng minh nhân dân</label></th>
+            <td><input type="number" id="cmdCust"></td>
+        </tr>
+        <tr>
+            <th><label for="dateCust">Ngày mở sổ</label></th>
+            <td><input type="text" id="dateCust"></td>
+        </tr>
+        <tr>
+            <th><label for="amount">Số tiền</label></th>
+            <td><input type="text" id="amount"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="btn btn-add" onclick="addSoTietKiem()">Thêm khách hàng</button></td>
+        </tr>
+    
+    
+</table>
     <h3>Danh sách</h3>
     <table border="1" id="list">
-        
-        
+
     </table>
 </body>
 <script src="soTietKiem.js"></script>
 <script src="bank.js"></script>
 <script src="main.js"></script>
+
 </html>
