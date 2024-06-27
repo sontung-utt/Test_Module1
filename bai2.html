@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num11">Nhập tử số thứ nhất</label>
+    <input type="text" id="num11"><br><br>
+    <label for="num12">Nhập mẫu số thứ nhất</label>
+    <input type="text" id="num12"><br><br>
+    <label for="num21">Nhập tử số thứ hai</label>
+    <input type="text" id="num21"><br><br>
+    <label for="num22">Nhập mẫu số thứ hai</label>
+    <input type="text" id="num22"><br><br>
+    <button onclick="getResult()">Kết quả</button>
+    <p id="result"></p>
+    <script>
+        function checkNum(a,b,c,d){
+            if (a * d === b * c){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function getResult(){
+            let num11 = document.getElementById("num11").value;
+            let num12 = document.getElementById("num12").value;
+            let num21 = document.getElementById("num21").value;
+            let num22 = document.getElementById("num22").value;
+            let result = "";
+            result += "Phân số thứ nhất là: " + num11 + "/" + num12 + "<br>";
+            result += "Phân số thứ hai là: " + num21 + "/" + num22 + "<br>";
+            if(checkNum(num11,num12,num21,num22)){
+                result += "Hai phân số bằng nhau" + "<br>";
+            } else {
+                result += "Hai phân số không bằng nhau" + "<br>";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

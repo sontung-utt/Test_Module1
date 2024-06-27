@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="array">Nhập mảng</label>
+    <input type="text" id="array"><br><br>
+    <button onclick="getResult()">Kết quả</button>
+    <p id="result"></p>
+    <p id="arrayResult"></p>
+    <script>
+        function isPrime(num){
+            if(num < 2){
+                return false;
+            }
+            let count = 0;
+            for(let i = 0; i<=num; i++){
+                if(num % i == 0){
+                    count++;
+                }
+            }
+            if(count == 2){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function getResult(){
+            let arrayA = document.getElementById("array").value;
+            arrayA = arrayA.split(",").map(Number);
+            let arrayB = [];
+            if(arrayA.length > 50){
+                alert("Mảng không được phép lớn hơn 50");
+                return;
+            }
+            let checkNum = arrayA.filter(num => !Number.isInteger(num) || isNaN(num));
+            if(checkNum > 0){
+                alert("Yêu cầu nhập số nguyên trong mảng!");
+                return;
+            }
+            document.getElementById("result").innerHTML = "Mảng vừa nhập là: " + arrayA.join(", ");
+            for (let i = 0; i< arrayA.length; i++){
+                if (isPrime(arrayA[i])){
+                    arrayB.push(arrayA[i]);
+                }
+            }
+
+            document.getElementById("arrayResult").innerHTML = "Mảng số nguyên tố là: " + arrayB.join(", ");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    th,
+    td {
+        padding: 6px 8px;
+    }
+</style>
+<body>
+    <h1>Quản lý sổ tiết kiệm</h1>
+    <label for="idCust">Nhập mã số</label>
+    <input type="text" id="idCust"><br><br>
+    <label for="typeCust">Loại tiết kiệm</label>
+    <input type="text" id="typeCust"><br><br>
+    <label for="nameCust">Tên khách hàng</label>
+    <input type="text" id="nameCust"><br><br>
+    <label for="cmdCust">Chứng minh nhân dân</label>
+    <input type="number" id="cmdCust"><br><br>
+    <label for="dateCust">Ngày mở sổ</label>
+    <input type="text" id="dateCust"><br><br>
+    <label for="amount">Số tiền</label>
+    <input type="text" id="amount"><br><br>
+    <button onclick="addSoTietKiem()">Thêm khách hàng</button>
+    <h3>Danh sách</h3>
+    <table border="1" id="list">
+        
+        
+    </table>
+</body>
+<script src="soTietKiem.js"></script>
+<script src="bank.js"></script>
+<script src="main.js"></script>
+</html>
